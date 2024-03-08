@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My JavaScript Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #9391fa;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #38ffeb;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My JavaScript Code</h1>
+    </header>
+    <nav>
+        <a href="#selector">Selector methods</a>
+        <a href="#EventsInteract">Events & Interactions</a>
+    </nav>
+    <div class="container">
+        <section id="Selector">
+            <h2 class="section-heading">¡Bienvenido!</h2>
+            <div class="content">
+                <p>Breve introducción sobre quién eres y qué ofrece tu página.</p>
+            </div>
+        </section>
+        <section id="EventsInteract" style="display: none;">
+            <h2 class="section-heading">Sobre mí</h2>
+            <div class="content">
+                <p>Información sobre ti y tus habilidades, experiencia, etc.</p>
+            </div>
+        </section>
+    </div>
+    <!--<p>
+        This is an excersice
+    </p>
+    <h2>Heading 2</h2>
+
+    <ul id="list">
+        <li>Carolina</li>
+        <li>Erik</li>
+        <li>May</li>
+    </ul>-->
+    
+
+ <script src="main.js">
+
+ </script>
+</body>
+</html>
