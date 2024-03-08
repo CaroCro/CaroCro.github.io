@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My JavaScript Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #9391fa;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #38ffeb;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .container {
+            display: flex;
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .buttons {
+            border: 0;
+            margin: 10px;
+            line-height: 3;
+            width: 50px;
+            display: block;
+            padding: 0 80px 5px 20px;
+            font-size: 1rem;
+            text-align: center;
+            color: #fff;
+            text-shadow: 1px 1px 1px #000;
+            border-radius: 10px;
+            box-shadow: inset 2px 2px 3px rgb(224, 252, 250), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+        }
+        .buttonRed {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #fa0202;
+        }
+        .buttonGreen {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #008000;
+        }
+        .buttonBlue {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #0000FF;
+        }
+        .buttonYellow {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #FFFF00;
+        }
+        .buttonPurple {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #800080;
+        }
+        .circle {
+            display: flex;
+            margin: auto;
+            background: rgb(189, 199, 202);
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+        }
+        .draggable {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .dropzone {
+            width: 220px;
+            height: 220px;
+            border: 2px dashed #000;
+            margin: 10px;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <h1>My JavaScript Code</h1>
+    </header>
+    <nav>
+        <a href="#selector" onclick="showContent('selector')">Selector methods</a>
+        <a href="#eventsInteract" onclick="showContent('eventsInteract')">Events & Interactions</a>
+    </nav>
+    <div class="container">
+        <section id="selector">
+            <h2>Select Button</h2>
+
+            <div class="container" id="colorsList">
+                
+                <button class="buttons buttonRed" id="buttonRed" onclick="changeColor('Red')">Red</button>
+                <audio id="audioRed" src="Red.mp3"></audio>
+                <button class="buttons buttonGreen" id="buttonGreen" onclick="changeColor('Green')">Green</button>
+                <audio id="audioGreen" src="Green.mp3"></audio>
+                <button class="buttons buttonBlue" id="buttonBlue" onclick="changeColor('Blue')">Blue</button>
+                <audio id="audioBlue" src="Blue.mp3"></audio>
+                <button class="buttons buttonYellow" id="buttonYellow" onclick="changeColor('Yellow')">Yellow</button>
+                <audio id="audioYellow" src="Yellow.mp3"></audio>
+                <button class="buttons buttonPurple" id="buttonPurple" onclick="changeColor('Purple')">Purple</button>
+                <audio id="audioPurple" src="Purple.mp3"></audio>
+            
+                <div>
+                    <label class="container">Select all Colors
+                        <input type="checkbox" id="selectAll" onchange="selectAllColors()">
+                    </label>
+                </div>
+            </div>
+            <div class="circle" id="figure"></div>
+        </section>
+        <section id="eventsInteract" style="display: none;">
+            <div class="content">
+                <h1>Image Gallery</h1>
+                <div class="container">
+                    <div class="dropzone" id="dropzone1">Nature</div>
+                    <div class="dropzone" id="dropzone2">Animals</div>
+                    <div class="dropzone" id="dropzone3">Food</div>                
+                </div>
+                <div class="container">
+
+                    <img id="Animals" class="draggable" draggable="true" src="https://i.natgeofe.com/k/63b1a8a7-0081-493e-8b53-81d01261ab5d/red-panda-full-body_4x3.jpg" width="200" height="200" data-correct-dropzone="dropzone2">
+                    <img id="Nature" class="draggable" draggable="true" src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80" width="200" height="200" data-correct-dropzone="dropzone1">
+                    <img id="Food" class="draggable" draggable="true" src="https://viajes.nationalgeographic.com.es/medio/2023/12/04/gastronomia-italiana_9af3803e_868615674_231204125423_1200x823.jpg" width="200" height="200" data-correct-dropzone="dropzone3">
+                
+                </div>
+            </div>
+        </section>
+    </div>
+    
+ <script src="main.js"></script>
+</body>
+</html>
